@@ -1,34 +1,95 @@
-# D-form
+<p align="center">
+  <img src="docs/assets/logo.png" alt="Logo D-form" width="160">
+</p>
 
-Kênh phát hành bộ cài và cập nhật D-form cho Microsoft Word trên Windows.
+# D-form — Trợ lý văn bản trong Microsoft Word
 
-Repository này chứa trang tải, công cụ tạo thông tin cập nhật và tài liệu phát hành. Mã nguồn add-in D-form được giữ riêng; bộ cài nằm trong Releases.
+D-form hỗ trợ cán bộ soạn thảo và hoàn thiện văn bản ngay trong Word: chọn mẫu, điền thông tin đơn vị, xem trước chuẩn hóa, kiểm tra chính tả và thiết lập trang in.
 
-## Trạng thái
+**Miễn phí · Xử lý tài liệu trên máy · Word desktop 64-bit · Windows**
 
-D-form 1.7.0 preview cho Word desktop 64-bit. Tải tại [trang D-form](https://tronieph.github.io/d-form-releases/) hoặc [Releases](https://github.com/TroniePh/d-form-releases/releases).
+Bản hiện tại: **1.7.2 preview**, có logo chính thức và cơ chế bảo vệ mã trong bộ cài.
 
-## Tải và cập nhật
+[Trang tải D-form](https://tronieph.github.io/d-form-releases/) · [Ghi chú bản 1.7.2](https://github.com/TroniePh/d-form-releases/releases/tag/v1.7.2)
 
-Các bản phát hành xuất hiện tại [Releases](https://github.com/TroniePh/d-form-releases/releases).
+## Tải phần mềm
 
-- `AllUsers.exe`: cài cho toàn bộ người dùng, cần quyền quản trị; dùng để cập nhật bản đã cài toàn máy.
-- `Free.exe`: cài riêng cho người dùng hiện tại.
-- `SHA256SUMS.txt`: mã kiểm tra SHA-256 của bộ cài.
-- `update.json`: thông tin phiên bản để D-form kiểm tra và tải cập nhật.
-- `RELEASE-NOTES.md`: thay đổi và hướng dẫn của từng phiên bản.
+Hai bộ cài đều miễn phí; chọn theo phạm vi sử dụng trên máy.
 
-Lưu tài liệu và đóng Word trước khi chạy bộ cài. Cấu hình và mẫu cá nhân được giữ riêng trong tài khoản Windows.
+| Bộ cài | Phù hợp với | Quyền quản trị | Tải bản 1.7.2 |
+| --- | --- | --- | --- |
+| **Free** | Tài khoản Windows hiện tại | Không cần | [Tải Free.exe](https://github.com/TroniePh/d-form-releases/releases/download/v1.7.2/D-form-Setup-v1.7.2-Free.exe) |
+| **AllUsers** | Tất cả tài khoản trên máy | Cần | [Tải AllUsers.exe](https://github.com/TroniePh/d-form-releases/releases/download/v1.7.2/D-form-Setup-v1.7.2-AllUsers.exe) |
 
-[Liên hệ Phạm Duy](https://www.facebook.com/neull)
+Máy cần **Microsoft Word desktop 64-bit trên Windows** và **.NET Framework 4.8**. Word 32-bit và Word trên trình duyệt chưa thuộc phạm vi phát hành này.
 
-## Phát hành bản tiếp theo
+Đây là bản **preview**. Các kiểm tra chức năng trên DLL đã bảo vệ đã hoàn tất theo phạm vi bản cập nhật; cài mới, nâng cấp và nạp add-in qua đăng ký COM của bản 1.7.2 còn cần xác minh trước khi triển khai rộng.
 
-1. Build và kiểm thử bộ cài trước khi phát hành. Tăng phiên bản, ví dụ `1.7.1`. Mỗi bộ cài kế tiếp cần giữ thành phần `DFormUpdater.exe`, cấu hình của nó và đăng ký chạy nền. Trong dự án riêng dùng `installer/build-installer.ps1 -AutoUpdate` cho cả Free/AllUsers.
-2. Tạo release tag `v1.7.1`; tải lên đủ `D-form-Setup-v1.7.1-Free.exe` và `D-form-Setup-v1.7.1-AllUsers.exe` cùng ghi chú. Phiên bản và tên tệp phải khớp tag.
-3. Nếu còn dùng thử, chọn **This is a pre-release**. Chỉ bỏ nhãn này khi đã xác nhận phát hành ổn định.
-4. Bấm Publish release. GitHub Actions kiểm tra tên, nguồn tải, dung lượng và SHA-256 do GitHub ghi nhận, tạo thông tin cập nhật/checksum nếu thiếu và triển khai trang tải mới.
+## Cài đặt và bắt đầu sử dụng
 
-Website và `update.json` chọn bản đủ hai bộ cài có phiên bản lớn nhất; `stable.json` chỉ chọn bản ổn định. Bản thử còn mới hơn bản ổn định không được tự cấp cho máy dùng kênh ổn định. Cài gói có bộ cập nhật một lần để nhận các bản mới; Free chờ Word đóng rồi cài, AllUsers cần xác nhận quyền quản trị. Không tự đóng hoặc sửa tài liệu Word.
+1. Lưu tài liệu đang làm và đóng Word.
+2. Chạy bộ cài phù hợp. Khi nâng cấp, chọn **cùng loại Free hoặc AllUsers** với bản đang dùng; AllUsers cần xác nhận quyền quản trị Windows.
+3. Mở lại Word, chọn tab **D-form → Không gian làm việc** hoặc **Mở bảng điều khiển**.
+4. Chọn **Biểu mẫu** để tạo tài liệu, hoặc **Soạn thảo** để xử lý văn bản đang mở. Mở **Thông tin phiên bản** để kiểm tra 1.7.2.
 
-Workflow là hạ tầng phát hành, không thay thế kiểm thử tính năng/cài nâng cấp. Không tải lên thư mục nguồn add-in, cấu hình cơ quan hoặc tài liệu người dùng. Liên hệ Zalo **0868609901**.
+Trước khi chuẩn hóa toàn văn, kiểm tra thể thức đã nhận diện, đọc bảng xem trước rồi chọn **Sao lưu và áp dụng**. Đọc lại nội dung và bố cục trước khi ký ban hành.
+
+## Giao diện
+
+![Không gian làm việc D-form 1.7.2](docs/assets/workspace.png)
+
+## Tính năng
+
+- **Thư viện 122 mẫu Word:** tìm theo tên/nhóm; xem ảnh thật của 145 trang nguồn, chọn trang và phóng to trước khi tạo tài liệu.
+- **Chuẩn hóa có xem trước:** xử lý toàn văn, vùng chọn hoặc từng phần; chọn nhóm định dạng, lưu bản khôi phục và hỗ trợ hoàn tác. Có các lựa chọn hành chính, Đảng, Đoàn, quân đội, văn bản hợp nhất và giáo án.
+- **Chèn nhanh 83 thành phần:** hỗ trợ cơ quan, quốc hiệu, nơi nhận, chữ ký và các mức khẩn/mật.
+- **Kiểm tra chính tả tiếng Việt:** chọn phạm vi gồm nội dung, đầu/chân trang, chú thích và hộp văn bản; xem trước gợi ý thay thế và quản lý từ điển riêng.
+- **Công cụ tiếng Việt:** chuyển mã TCVN3/VNI sang Unicode, đổi kiểu đặt dấu thanh, làm sạch khoảng trắng và chuyển số tiền thành chữ.
+- **Trang in và bảng:** khổ giấy/lề, đánh số trang, chèn trang ngang/dọc độc lập và định dạng bảng.
+- **Dữ liệu đơn vị và mẫu riêng:** lưu thông tin cơ quan/người ký, nhập/xuất cấu hình, quản lý mẫu cơ quan và mở bản khôi phục thành tài liệu mới.
+- **Rà soát và hỗ trợ:** báo cáo thể thức, nhận xét tại vị trí cần kiểm tra và chẩn đoán phiên bản/kết nối/cài đặt.
+
+Luồng xem trước và khôi phục mới dùng tài liệu `.docx` không có macro hoặc mật khẩu. Với tài liệu có macro/mật khẩu, tạo bản làm việc `.docx` phù hợp trước khi dùng các luồng này. Mẫu cơ quan nhập riêng hiện chưa có ảnh xem trước.
+
+## Cập nhật tự động
+
+Cài gói trên trang tải một lần để có bộ cập nhật D-form. Khi bộ cập nhật chạy, phần mềm kiểm tra bản mới mỗi **12 giờ**; có thể kiểm tra ngay qua biểu tượng D-form ở khay Windows hoặc **Start → D-form → Cập nhật D-form**.
+
+- **Free:** tải và xác minh bộ cài, chờ Word đóng rồi cài cập nhật.
+- **AllUsers:** cần bấm thông báo cập nhật và xác nhận quyền quản trị; bộ cài chờ Word đóng.
+- Có thể bật/tắt cập nhật tự động trong menu khay Windows. Bộ cập nhật không tự đóng Word hoặc sửa tài liệu.
+
+Bản preview nhận cập nhật qua kênh preview. Kênh ổn định chỉ nhận bản được phát hành là stable; hiện chưa có bản stable.
+
+## Dữ liệu và bảo vệ mã
+
+Tài liệu, cấu hình cơ quan, từ điển và bản khôi phục được xử lý/lưu trên máy. Bộ cập nhật lấy thông tin phiên bản và bộ cài từ GitHub; không gửi những dữ liệu này lên GitHub. Cấu hình, hồ sơ và mẫu riêng nằm trong `%APPDATA%\DFormat`; bản khôi phục được giữ đến khi người dùng chủ động xóa.
+
+Từ 1.7.2, DLL và bộ cập nhật được **làm rối tên triển khai và ẩn chuỗi nội bộ** trước khi đóng gói. Mã nguồn gốc, PDB, DLL gốc chưa bảo vệ và bảng đối chiếu tên hàm giữ riêng. Đây là biện pháp làm khó dịch ngược, không bảo đảm chống lấy mã tuyệt đối.
+
+Các bản cũ chưa bảo vệ đã được ẩn khỏi kênh tải công khai và giữ bản lưu riêng. Những bộ cài đã được tải trước đó không thể thu hồi.
+
+## Kiểm tra bộ cài
+
+Mỗi release có [SHA256SUMS.txt](https://github.com/TroniePh/d-form-releases/releases/download/v1.7.2/SHA256SUMS.txt). Đối chiếu mã băm của tệp tải về trước khi sử dụng khi cần:
+
+```powershell
+Get-FileHash -Algorithm SHA256 -LiteralPath .\D-form-Setup-v1.7.2-Free.exe
+```
+
+Bản 1.7.2 đã qua **12 nhóm kiểm tra trên chính DLL đã bảo vệ** và **24 kiểm tra chính sách cập nhật**. Hai bộ cài được giải nén, đối chiếu đủ 286 tệp và xác nhận không chứa mã nguồn/PDB/bảng đối chiếu/DLL gốc.
+
+## Hỗ trợ
+
+**D-form by Phạm Duy**
+
+- [Zalo: 0868609901](https://zalo.me/0868609901)
+- [Facebook: Phạm Duy](https://www.facebook.com/neull)
+
+Khi cần hỗ trợ, gửi phiên bản D-form, phiên bản Word và mô tả thao tác gặp lỗi. Có thể dùng **Thiết lập → Tình trạng cài đặt** để sao chép báo cáo.
+
+## Repository này
+
+Đây là kênh bộ cài, tài liệu và website của D-form. Mã nguồn add-in được giữ riêng. [Releases](https://github.com/TroniePh/d-form-releases/releases) chứa bộ cài; thư mục `docs` chứa website; `scripts/build_feed.py` tạo thông tin tải/cập nhật từ các release đã công khai.
+
+Khi phát hành tiếp, giữ hai bộ cài đã bảo vệ, bộ cập nhật và các tài liệu/checksum của release. Tên tệp `D-form-Setup-vX.Y.Z-Free.exe` và `D-form-Setup-vX.Y.Z-AllUsers.exe` phải khớp tag `vX.Y.Z`. GitHub Actions chọn phiên bản đủ hai bộ cài cao nhất để cập nhật website; quy trình này không thay thế kiểm thử trước phát hành.
