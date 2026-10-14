@@ -1,4 +1,32 @@
 {
-  "updated_at": "2026-10-14T03:40:54.237473+00:00",
-  "releases": []
+  "updated_at": "2026-10-14T05:42:53.875364+00:00",
+  "releases": [
+    {
+      "available": true,
+      "version": "1.7.0",
+      "channel": "preview",
+      "published_at": "2026-10-14T03:54:09Z",
+      "release_url": "https://github.com/TroniePh/d-form-releases/releases/tag/v1.7.0",
+      "notes": "# D-form 1.7.0 preview — tải và cập nhật từ GitHub\n\nBản dùng thử cho Microsoft Word desktop 64-bit trên Windows, .NET Framework 4.8.\n\nBổ sung bộ cập nhật chạy nền trong bộ cài. Thành phần này kiểm tra bản mới mỗi 12 giờ khi máy hoạt động, tải đúng phạm vi Free/AllUsers và xác minh SHA-256. Bộ cài chỉ chạy sau khi Word đóng. Free có thể tự cài; AllUsers cần bấm thông báo và xác nhận quyền quản trị của Windows. Có thể bật/tắt cập nhật ở biểu tượng D-form trong khay hệ thống. Bản cũ cần cài gói mới một lần để có thành phần này.\n\nTrang tải: https://tronieph.github.io/d-form-releases/\n\nCác tính năng 1.7.0: xem trước chuẩn hóa theo nhóm, bản khôi phục trước thao tác toàn văn, 122 mẫu/145 trang xem trước, chính tả nhiều vùng, kiểm tra tình trạng cài đặt. Giữ các sửa lỗi chèn dấu và chuẩn hóa mẫu.\n\nDLL xử lý văn bản giữ nguyên SHA256 `0A2B303EB0668AD37F2FFF8B257CBFEF1D15BA1B1E895D089D7E19781468F9FE`, đã qua 40 bộ kiểm thử và 122 mẫu, 528 lượt chèn dấu; 145 trang trước/sau giữ số trang. Thành phần cập nhật được build và kiểm tra riêng; bộ cài được giải nén và đối chiếu toàn bộ payload.\n\nBản này giữ nhãn preview. Cài nâng cấp và nạp add-in mới trong Word trên máy sử dụng còn cần xác nhận; không chứng nhận Word 32-bit hoặc mọi đầu ra giống V-Format 100%. Lưu tài liệu và đóng Word trước khi cài, chọn cùng phạm vi với bản đang dùng.\n\nLiên hệ: Zalo 0868609901 — Facebook Phạm Duy: https://www.facebook.com/neull\n",
+      "word_architectures": [
+        "x64"
+      ],
+      "assets": [
+        {
+          "scope": "Free",
+          "name": "D-form-Setup-v1.7.0-Free.exe",
+          "url": "https://github.com/TroniePh/d-form-releases/releases/download/v1.7.0/D-form-Setup-v1.7.0-Free.exe",
+          "size": 16099169,
+          "sha256": "67f9e6b49e66fd22fe4d1612656ffcaed3ab4c5e2d295440447f96eadf38745f"
+        },
+        {
+          "scope": "AllUsers",
+          "name": "D-form-Setup-v1.7.0-AllUsers.exe",
+          "url": "https://github.com/TroniePh/d-form-releases/releases/download/v1.7.0/D-form-Setup-v1.7.0-AllUsers.exe",
+          "size": 16099309,
+          "sha256": "d09c1c4040497e84a2b863a2656ab5c96008a09d35d7552109fb241d0a583419"
+        }
+      ]
+    }
+  ]
 }

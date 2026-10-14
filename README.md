@@ -24,7 +24,7 @@ Lưu tài liệu và đóng Word trước khi chạy bộ cài. Cấu hình và 
 
 ## Phát hành bản tiếp theo
 
-1. Build và kiểm thử bộ cài trước khi phát hành. Tăng phiên bản, ví dụ `1.7.1`.
+1. Build và kiểm thử bộ cài trước khi phát hành. Tăng phiên bản, ví dụ `1.7.1`. Mỗi bộ cài kế tiếp cần giữ thành phần `DFormUpdater.exe`, cấu hình của nó và đăng ký chạy nền. Trong dự án riêng dùng `installer/build-installer.ps1 -AutoUpdate` cho cả Free/AllUsers.
 2. Tạo release tag `v1.7.1`; tải lên đủ `D-form-Setup-v1.7.1-Free.exe` và `D-form-Setup-v1.7.1-AllUsers.exe` cùng ghi chú. Phiên bản và tên tệp phải khớp tag.
 3. Nếu còn dùng thử, chọn **This is a pre-release**. Chỉ bỏ nhãn này khi đã xác nhận phát hành ổn định.
 4. Bấm Publish release. GitHub Actions kiểm tra tên, nguồn tải, dung lượng và SHA-256 do GitHub ghi nhận, tạo thông tin cập nhật/checksum nếu thiếu và triển khai trang tải mới.
