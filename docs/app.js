@@ -3,9 +3,12 @@ const releaseBase='https://github.com/TroniePh/d-form-releases/releases';
 async function loadRelease(){
   const status=document.getElementById('release-status');
   try{
-    const response=await fetch('update.json',{cache:'no-store'});
-    if(!response.ok)throw new Error('Feed unavailable');
-    const release=await response.json();
+    const stableResponse=await fetch('stable.json',{cache:'no-store'});
+    const stable=stableResponse.ok?await stableResponse.json():null;
+    if(stable&&stable.available&&stable.channel!=='stable')throw new Error('Invalid stable channel');
+    const response=stable&&stable.available?null:await fetch('update.json',{cache:'no-store'});
+    if(response&&!response.ok)throw new Error('Feed unavailable');
+    const release=response?await response.json():stable;
     if(!release.available){status.textContent='Bộ cài đang được chuẩn bị. Bạn có thể liên hệ để nhận hỗ trợ.';return;}
     if(!/^\d+\.\d+\.\d+$/.test(release.version)||!['stable','preview'].includes(release.channel)||!Array.isArray(release.assets)||release.assets.length!==2)throw new Error('Invalid release');
     const assets=['Free','AllUsers'].map(scope=>{
