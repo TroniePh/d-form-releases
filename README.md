@@ -8,18 +8,18 @@ D-form hỗ trợ cán bộ soạn thảo và hoàn thiện văn bản ngay tron
 
 **Miễn phí · Xử lý tài liệu trên máy · Word desktop 64-bit · Windows**
 
-Bản hiện tại: **1.8.0**, bổ sung kiểm tra trước ban hành và xuất PDF, có logo chính thức và bảo vệ mã trong bộ cài.
+Bản hiện tại: **1.9.0** — sửa luồng xem trước có thể hủy và giới hạn thời gian; cải thiện nhận diện dòng trống khi dán từ web; thêm quản lý nhận xét rà soát. Đã kiểm thử 42 nhóm và toàn bộ 122 mẫu, cài nâng cấp AllUsers thực tế trên Word 64-bit.
 
-[Trang tải D-form](https://tronieph.github.io/d-form-releases/) · [Ghi chú bản 1.8.0](https://github.com/TroniePh/d-form-releases/releases/tag/v1.8.0)
+[Trang tải D-form](https://tronieph.github.io/d-form-releases/) · [Ghi chú bản 1.9.0](https://github.com/TroniePh/d-form-releases/releases/tag/v1.9.0)
 
 ## Tải phần mềm
 
 Hai bộ cài đều miễn phí; chọn theo phạm vi sử dụng trên máy.
 
-| Bộ cài | Phù hợp với | Quyền quản trị | Tải bản 1.8.0 |
+| Bộ cài | Phù hợp với | Quyền quản trị | Tải bản 1.9.0 |
 | --- | --- | --- | --- |
-| **Free** | Tài khoản Windows hiện tại | Không cần | [Tải Free.exe](https://github.com/TroniePh/d-form-releases/releases/download/v1.8.0/D-form-Setup-v1.8.0-Free.exe) |
-| **AllUsers** | Tất cả tài khoản trên máy | Cần | [Tải AllUsers.exe](https://github.com/TroniePh/d-form-releases/releases/download/v1.8.0/D-form-Setup-v1.8.0-AllUsers.exe) |
+| **Free** | Tài khoản Windows hiện tại | Không cần | [Tải Free.exe](https://github.com/TroniePh/d-form-releases/releases/download/v1.9.0/D-form-Setup-v1.9.0-Free.exe) |
+| **AllUsers** | Tất cả tài khoản trên máy | Cần | [Tải AllUsers.exe](https://github.com/TroniePh/d-form-releases/releases/download/v1.9.0/D-form-Setup-v1.9.0-AllUsers.exe) |
 
 Máy cần **Microsoft Word desktop 64-bit trên Windows** và **.NET Framework 4.8**. Word 32-bit và Word trên trình duyệt chưa thuộc phạm vi phát hành này.
 
@@ -30,15 +30,19 @@ Máy cần **Microsoft Word desktop 64-bit trên Windows** và **.NET Framework 
 1. Lưu tài liệu đang làm và đóng Word.
 2. Chạy bộ cài phù hợp. Khi nâng cấp, chọn **cùng loại Free hoặc AllUsers** với bản đang dùng; AllUsers cần xác nhận quyền quản trị Windows.
 3. Mở lại Word, chọn tab **D-form → Không gian làm việc** hoặc **Mở bảng điều khiển**.
-4. Chọn **Biểu mẫu** để tạo tài liệu, hoặc **Soạn thảo** để xử lý văn bản đang mở. Mở **Thông tin phiên bản** để kiểm tra 1.8.0.
+4. Chọn **Biểu mẫu** để tạo tài liệu, hoặc **Soạn thảo** để xử lý văn bản đang mở. Mở **Thông tin phiên bản** để kiểm tra 1.9.0.
 
 Trước khi chuẩn hóa toàn văn, kiểm tra thể thức đã nhận diện, đọc bảng xem trước rồi chọn **Sao lưu và áp dụng**. Đọc lại nội dung và bố cục trước khi ký ban hành.
 
 ## Giao diện
 
-![Không gian làm việc D-form 1.8.0](docs/assets/workspace.png)
+![Không gian làm việc D-form 1.9.0](docs/assets/workspace.png)
 
 ## Tính năng
+
+- **Mới ở 1.9.0:** xem trước có tiến độ, Hủy và giới hạn thời gian; có Áp dụng không xem trước với sao lưu/hoàn tác. Word mở bản sao sau khi đã tắt macro và cập nhật liên kết.
+- **Nhận xét rà soát:** xóa riêng nhận xét D-form hoặc xóa toàn bộ sau khi xác nhận; hỗ trợ Ctrl+Z. Có trong menu Rà soát thể thức và công cụ bổ sung.
+- **Văn bản dán từ web:** nhận diện thêm các dòng trống chứa khoảng trắng Unicode khi dựng khung cơ quan và chữ ký.
 
 - **Kiểm tra trước ban hành:** rà ô mẫu, số/ký hiệu, ngày, nhận xét và sửa đổi chưa xử lý; chọn vị trí để sửa. Người ký và thẩm quyền cần đối chiếu thủ công.
 - **Xuất PDF:** gợi ý tên file, xuất toàn văn bằng Word và xác nhận ghi đè. Xử lý sửa đổi đang theo dõi trước khi xuất.
@@ -63,7 +67,7 @@ Cài gói trên trang tải một lần để có bộ cập nhật D-form. Khi 
 - **AllUsers:** cần bấm thông báo cập nhật và xác nhận quyền quản trị; bộ cài chờ Word đóng.
 - Có thể bật/tắt cập nhật tự động trong menu khay Windows. Bộ cập nhật không tự đóng Word hoặc sửa tài liệu.
 
-Bộ cài 1.8.0 dùng **kênh ổn định**, chỉ nhận bản phát hành stable. Trang tải ưu tiên bản ổn định khi có; các bản preview riêng dùng để thử nghiệm.
+Bộ cài 1.9.0 dùng **kênh ổn định**, chỉ nhận bản phát hành stable. Trang tải ưu tiên bản ổn định khi có; các bản preview riêng dùng để thử nghiệm.
 
 ## Dữ liệu và bảo vệ mã
 
@@ -75,13 +79,13 @@ Các bản cũ chưa bảo vệ đã được ẩn khỏi kênh tải công khai
 
 ## Kiểm tra bộ cài
 
-Mỗi release có [SHA256SUMS.txt](https://github.com/TroniePh/d-form-releases/releases/download/v1.8.0/SHA256SUMS.txt). Đối chiếu mã băm của tệp tải về trước khi sử dụng khi cần:
+Mỗi release có [SHA256SUMS.txt](https://github.com/TroniePh/d-form-releases/releases/download/v1.9.0/SHA256SUMS.txt). Đối chiếu mã băm của tệp tải về trước khi sử dụng khi cần:
 
 ```powershell
-Get-FileHash -Algorithm SHA256 -LiteralPath .\D-form-Setup-v1.8.0-Free.exe
+Get-FileHash -Algorithm SHA256 -LiteralPath .\D-form-Setup-v1.9.0-Free.exe
 ```
 
-Bản 1.8.0 đã qua **40 nhóm kiểm tra trên DLL đã bảo vệ**, **122 mẫu**, **41 kiểm tra bàn giao**, **69 kiểm tra bảo vệ mã** và **24 kiểm tra chính sách cập nhật**. Hai bộ cài được giải nén, đối chiếu đủ 287 tệp payload và xác nhận không chứa mã nguồn/PDB/bảng đối chiếu/DLL gốc. Bộ cài chưa ký chứng thư thương mại; SHA256 có trong release.
+Bản 1.9.0 đã qua **42 nhóm kiểm tra trên DLL đã bảo vệ**, **122 mẫu**, **41 kiểm tra bàn giao**, **71 kiểm tra bảo vệ mã** và **24 kiểm tra chính sách cập nhật**. Đã cài nâng cấp AllUsers và kiểm tra thao tác thực tế trên Word 64-bit. Hai bộ cài được giải nén, đối chiếu đủ 287 tệp payload và xác nhận không chứa mã nguồn/PDB/bảng đối chiếu/DLL gốc. Chưa kiểm thử cài trên máy sạch hoặc Word 32-bit. Bộ cài chưa ký chứng thư thương mại; SHA256 có trong release.
 
 ## Hỗ trợ
 
